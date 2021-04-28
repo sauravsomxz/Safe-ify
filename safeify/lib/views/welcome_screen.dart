@@ -31,7 +31,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Text(
                   'Safeify',
                   style: TextStyle(
-                    backgroundColor: Colors.white,
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                   ),
