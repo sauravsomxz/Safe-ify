@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static String id = 'register_screen';
@@ -21,7 +24,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           children: <Widget>[
             Container(
               height: 200.0,
-              child: Image.asset('images/logo.png'),
+              //child: Image.asset('images/logo.png'),
             ),
             SizedBox(
               height: 48.0,

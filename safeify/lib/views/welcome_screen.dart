@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:safeify/views/login_screen.dart';
 import 'package:safeify/views/registration_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
@@ -25,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                  child: Image.asset('images/logo.png'),
+                 // child: Image.asset('images/logo.png'),
                   height: 60.0,
                 ),
                 Text(
