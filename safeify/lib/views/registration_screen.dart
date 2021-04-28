@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'homepage.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -100,7 +101,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         Navigator.pushNamed(context, HomePage.id);
                       }
                     } catch (e) {
-                      print(e);
+                      Fluttertoast.showToast(
+                          msg: e.toString(),
+                          toastLength: Toast.LENGTH_LONG,
+                          gravity: ToastGravity.CENTER,
+                          timeInSecForIosWeb: 1,
+                          textColor: Colors.white,
+                          fontSize: 16.0);
                     }
                   },
                   minWidth: 200.0,

@@ -14,6 +14,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center();
+    return Scaffold(
+      backgroundColor: Colors.tealAccent,
+    );
   }
 }
