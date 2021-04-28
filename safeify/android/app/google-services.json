@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "226967578996",
+    "project_id": "safe-ify-97100",
+    "storage_bucket": "safe-ify-97100.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226967578996:android:fa8193192b14467ecf2421",
+        "android_client_info": {
+          "package_name": "com.example.safeify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226967578996-55ubip543f38mgtuintsviqoajlk43ts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO8DsCuVImIFE7NW5dpGcvpQZuo2py7zI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226967578996-55ubip543f38mgtuintsviqoajlk43ts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
