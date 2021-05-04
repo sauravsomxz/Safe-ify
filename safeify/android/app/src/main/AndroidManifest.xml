@@ -1,8 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.safeify">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
    <application
         android:label="safeify"
         android:icon="@mipmap/ic_launcher">
+
+       <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1Ijoic2ljc3JtaW5pcHJvamVjdCIsImEiOiJja282dTA3M2owMTJpMm5zMnJ0dnhzOXRiIn0.PxjKYduPD2gB6n9aO2k5Jg"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
