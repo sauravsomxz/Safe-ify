@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         WelcomeScreen.id : (context) => WelcomeScreen(),
         HomePage.id : (context) => HomePage(),
       },
-      home: LoginScreen(),
+      home: WelcomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
