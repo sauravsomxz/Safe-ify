@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -9,6 +10,26 @@ class FullScreenMap extends StatefulWidget {
 
 class _FullScreenMapState extends State<FullScreenMap> {
   MapboxMapController mapController;
+  LatLng _center;
+  Position currentLocation;
+
+  @override
+  void initState() {
+    super.initState();
+    getUserLocation();
+  }
+
+  Future<Position> locateUser() async {
+    return Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.best);
+  }
+
+  getUserLocation() async {
+      currentLocation = await locateUser();
+      setState(() {
+        _center = LatLng(currentLocation.latitude, currentLocation.longitude);
+      });
+  }
 
   LatLng _center;
   Position currentLocation;
@@ -49,16 +70,11 @@ class _FullScreenMapState extends State<FullScreenMap> {
       ),
       body: MapboxMap(
         zoomGesturesEnabled: true,
-        initialCameraPosition: CameraPosition(
-            target: LatLng(
-                _center.latitude,
-                _center.longitude
-            ),
-            zoom: 14),
 
+        initialCameraPosition: CameraPosition(target: LatLng(_center.latitude, _center.longitude), zoom: 14),
         myLocationEnabled: true,
         trackCameraPosition: true,
-      ),
-    );
+      ),);
+
   }
 }
