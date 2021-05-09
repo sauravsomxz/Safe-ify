@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -24,15 +25,10 @@ class _FullScreenMapState extends State<FullScreenMap> {
   }
 
   getUserLocation() async {
-    try {
       currentLocation = await locateUser();
       setState(() {
         _center = LatLng(currentLocation.latitude, currentLocation.longitude);
       });
-      print('center $_center');
-    } catch (e) {
-      print(e);
-    }
   }
 
   void _onMapCreated(MapboxMapController controller){
