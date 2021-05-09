@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:safeify/views/map.dart';
 
+import 'add_mates.dart';
+
 class HomePage extends StatefulWidget {
   static String id = 'homepage';
 
@@ -10,8 +12,45 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  void handleClick(String value){
+    switch(value){
+      case 'Add Mates':
+        Navigator.pushNamed(context, AddMates.id);
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return FullScreenMap();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          PopupMenuButton(
+            onSelected: handleClick,
+            itemBuilder: (BuildContext context) {
+              return {'Add Mates'}.map((String choice){
+                return PopupMenuItem<String>(
+                  value:choice,
+                  child:Text(choice),
+                );
+              }).toList();
+            },
+          ),
+        ],
+        backgroundColor: Colors.red,
+        title: Text(
+          'Your location',
+        ),
+      ),
+
+      body: FullScreenMap(),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        elevation: 10.0,
+        backgroundColor: Colors.red,
+        child: Icon(Icons.warning),
+      ),
+    );
   }
 }
