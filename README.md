@@ -10,7 +10,7 @@ Step - II: Download Flutter and Dart. The dart package comes inbuilt with Flutte
 Step - III: Clone the repository.<br>
 Step - IV: Open the repository on "Android Studio".<br>
 Step - V: Open "Projects" tab on the left, and open "Pubspec.yaml". Click on "Packagaes Get".<br>
-                                    <center>OR</center><br>
+                                    OR<br>
 Step - V: Open Terminal and type "Flutter Pub Get" by being the in the project directory.<br>
 Step - VI: Goto <No Devices> section and start the "Emulator". If you don't have an emulator then goto AVD Manager and create one.<br>
 Step - VII: Click on the Start button, Green Play Button, and let the gradle buiild and then start the app.<br>
