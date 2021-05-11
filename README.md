@@ -51,7 +51,7 @@ Further Development Ideas -
 * Adding "Register Here" to the "Login" Page for unregistered users, so that it will get redirected to the registration page.
 * Adding "Login" page if the user tried to register and already exists.
 
-## Contributors
+## Contributors && Managers
 
 | Name                       | GitHub                                                 | Social                                                                    |
 | :------------------        | :-------------------------------------------           | :----------------------------------------------------                     |
