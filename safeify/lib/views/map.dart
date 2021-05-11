@@ -9,8 +9,6 @@ class FullScreenMap extends StatefulWidget {
   _FullScreenMapState createState() => _FullScreenMapState();
 }
 
-List<String> recipents = ["8328854263", "7363873537"];
-
 class _FullScreenMapState extends State<FullScreenMap> {
 
   MapboxMapController mapController;
