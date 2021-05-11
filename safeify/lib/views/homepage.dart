@@ -45,12 +45,6 @@ class _HomePageState extends State<HomePage> {
 
       body: FullScreenMap(),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        elevation: 10.0,
-        backgroundColor: Colors.red,
-        child: Icon(Icons.warning),
-      ),
     );
   }
 }
