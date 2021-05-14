@@ -35,7 +35,6 @@ dependencies:
   mapbox_gl: ^0.0.1
   geolocator: ^7.0.3
   twilio_flutter: ^0.0.9
-#  flutter_sms: ^2.0.0
 
 
 dev_dependencies:
