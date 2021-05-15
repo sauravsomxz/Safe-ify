@@ -30,7 +30,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
 
   void sendSMS() async {
     twilioFlutter.sendSMS(
-        toNumber: '+919762290291', // Accepted Numbers - +918328854263, +917363873537, +919762290291
+        toNumber: '+918328854263', // Accepted Numbers - +918328854263, +917363873537, +919762290291
         messageBody: '$_center'
     );
   }
