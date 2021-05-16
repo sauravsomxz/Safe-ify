@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:safeify/views/homepage.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:safeify/views/registration_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
@@ -118,6 +119,40 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
+            ),
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    "Haven't yet Registered? Register below!",
+                    style: TextStyle(
+                        fontSize: 18
+                    ),
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      // RegistrationScreen();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegistrationScreen())
+                      );
+                    },
+                    minWidth: 200.0,
+                    height: 42.0,
+                    focusColor: Colors.white,
+                    child: Text(
+                        'Register Here'
+                    ),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        side: BorderSide(
+                            color: Colors.white
+                        )
+                    ),
+                  )
+                ],
+              )
             ),
           ],
         ),
