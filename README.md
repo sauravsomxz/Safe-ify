@@ -48,8 +48,8 @@ Further Development Ideas -
 * Saving the "close people" details to Firebase storage and retrieval from the same.
 * Adding Session, when the user click on back that log out and not go to "Login/Register" Page
 * Adding "Fogot Password" to the "Login" page so that the user can reset the password.
-* Adding "Register Here" to the "Login" Page for unregistered users, so that it will get redirected to the registration page.
-* Adding "Login" page if the user tried to register and already exists.
+* <strike>Adding "Register Here" to the "Login" Page for unregistered users, so that it will get redirected to the registration page.</strike>
+* <strike>Adding "Login" page if the user tried to register and already exists.</strike>
 
 ## Contributors && Managers
 
