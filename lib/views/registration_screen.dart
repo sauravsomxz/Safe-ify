@@ -125,28 +125,23 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 children: <Widget>[
                   Text(
                     "Have already registered? Login Below!",
-                    style: TextStyle(
-                        fontSize: 20
-                    ),
+                    style: TextStyle(fontSize: 20),
                   ),
                   MaterialButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => LoginScreen()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LoginScreen()));
                     },
                     minWidth: 200.0,
                     height: 42.0,
                     focusColor: Colors.white,
-                    child: Text(
-                        "Login Here"
-                    ),
+                    child: Text("Login Here"),
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0),
-                        side: BorderSide(
-                            color: Colors.white
-                        )
-                    ),
+                        side: BorderSide(color: Colors.white)),
                   )
                 ],
               ),
@@ -157,7 +152,3 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
   }
 }
-
-
-
-

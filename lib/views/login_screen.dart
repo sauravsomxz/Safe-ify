@@ -108,8 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           gravity: ToastGravity.CENTER,
                           timeInSecForIosWeb: 1,
                           textColor: Colors.white,
-                          fontSize: 16.0
-                      );
+                          fontSize: 16.0);
                     }
                   },
                   minWidth: 200.0,
@@ -121,39 +120,31 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Expanded(
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    "Haven't yet Registered? Register below!",
-                    style: TextStyle(
-                        fontSize: 18
-                    ),
-                  ),
-                  MaterialButton(
-                    onPressed: () {
-                      // RegistrationScreen();
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => RegistrationScreen())
-                      );
-                    },
-                    minWidth: 200.0,
-                    height: 42.0,
-                    focusColor: Colors.white,
-                    child: Text(
-                        'Register Here'
-                    ),
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        side: BorderSide(
-                            color: Colors.white
-                        )
-                    ),
-                  )
-                ],
-              )
-            ),
+                child: Column(
+              children: <Widget>[
+                Text(
+                  "Haven't yet Registered? Register below!",
+                  style: TextStyle(fontSize: 18),
+                ),
+                MaterialButton(
+                  onPressed: () {
+                    // RegistrationScreen();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegistrationScreen()));
+                  },
+                  minWidth: 200.0,
+                  height: 42.0,
+                  focusColor: Colors.white,
+                  child: Text('Register Here'),
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
+                      side: BorderSide(color: Colors.white)),
+                )
+              ],
+            )),
           ],
         ),
       ),
