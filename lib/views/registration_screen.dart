@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:safeify/views/login_screen.dart';
 import 'homepage.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -119,9 +120,44 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ),
               ),
             ),
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    "Have already registered? Login Below!",
+                    style: TextStyle(
+                        fontSize: 20
+                    ),
+                  ),
+                  MaterialButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginScreen()));
+                    },
+                    minWidth: 200.0,
+                    height: 42.0,
+                    focusColor: Colors.white,
+                    child: Text(
+                        "Login Here"
+                    ),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                        side: BorderSide(
+                            color: Colors.white
+                        )
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
