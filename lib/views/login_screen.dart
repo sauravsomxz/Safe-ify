@@ -28,9 +28,11 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              //child: Image.asset('images/logo.png'),
+            Expanded(
+              child: Container(
+                height: 200.0,
+                //child: Image.asset('images/logo.png'),
+              ),
             ),
             SizedBox(
               height: 48.0,
@@ -117,6 +119,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     'Log In',
                   ),
                 ),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  Text("Enter Email above and then click below to reset"),
+                  MaterialButton(
+                    onPressed: () {
+                      _auth.sendPasswordResetEmail(email: email);
+                      Fluttertoast.showToast(
+                          msg:
+                              "If your email is registered, then you will receive a email with password reset link else Register Below to continue.");
+                    },
+                    minWidth: 200.0,
+                    height: 40.0,
+                    child: Text("Forgot Password? Click here."),
+                  )
+                ],
               ),
             ),
             Expanded(
