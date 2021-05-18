@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
           PopupMenuButton(
             onSelected: handleClick,
             itemBuilder: (BuildContext context) {
-              return {'Add Mates'}.map((String choice){
+              return {'Add Mates', 'Log Out'}.map((String choice){
                 return PopupMenuItem<String>(
                   value:choice,
                   child:Text(choice),
